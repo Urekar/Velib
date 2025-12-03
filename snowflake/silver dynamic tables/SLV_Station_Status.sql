@@ -18,5 +18,5 @@ SELECT
     s.value:stationCode::STRING AS station_code,
     r.file_name,
     r.load_time
-FROM bronze.raw_station_status AS r,
+FROM bronze.brz_station_status AS r,
      LATERAL FLATTEN(input => r.raw:data:stations) AS s;

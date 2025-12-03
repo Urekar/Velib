@@ -14,5 +14,5 @@ SELECT
     s.value:capacity::NUMBER AS capacity,
     r.file_name,
     r.load_time
-FROM bronze.raw_station_information AS r,
+FROM bronze.brz_station_information AS r,
      LATERAL FLATTEN(input => r.raw:data:stations) AS s;

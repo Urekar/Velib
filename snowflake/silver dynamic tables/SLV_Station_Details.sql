@@ -31,6 +31,6 @@ SELECT
     b.value:numberOfRates::number     AS number_of_rates,
     b.value:stationId::string          AS bike_station_id
 
-FROM BRONZE.raw_station_details r,
+FROM BRONZE.brz_station_details r,
      LATERAL FLATTEN(input => r.raw) s,
      LATERAL FLATTEN(input => s.value:bikes) b;
