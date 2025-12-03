@@ -1,0 +1,8 @@
+USE DATABASE VELIB_DB;
+USE SCHEMA BRONZE;  
+
+CREATE OR REPLACE STAGE Stage_Station_Status
+  URL = 'gcs://bucket-velib/'
+  STORAGE_INTEGRATION = gcs_velib_integration_v2  
+  NOTIFICATION_INTEGRATION = gcs_int
+  AUTO_REFRESH = TRUE;

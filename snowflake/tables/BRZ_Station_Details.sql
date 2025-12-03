@@ -1,0 +1,8 @@
+USE DATABASE VELIB_DB;
+USE SCHEMA BRONZE;
+
+CREATE OR REPLACE TABLE brz_station_details (
+    raw VARIANT,
+    file_name STRING,
+    load_time TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP()
+);
