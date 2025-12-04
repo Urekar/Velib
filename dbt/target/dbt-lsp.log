@@ -5,3 +5,30 @@
 15:55:38.905587 [info ]: Creating LSP service...
 15:55:38.982512 [info ]: Creating LSP server...
 15:55:38.982557 [info ]: Starting LSP server...
+==================== 2025-12-04 09:39:04.605132 | 22c64c91-65b8-47b1-a732-6b23d3f93ec0 ====================
+09:39:04.607329 [info ]: Starting dbt LSP server
+09:39:04.607386 [info ]: Connecting to LSP client on port 8000
+09:39:04.608749 [info ]: Successfully connected to LSP client
+09:39:04.608781 [info ]: Creating LSP service...
+09:39:04.691810 [info ]: Creating LSP server...
+09:39:04.691858 [info ]: Starting LSP server...
+10:11:29.315766 [info ]: Cached model count updated: 3 models (estimate)
+10:11:29.423216 [error]: dbt1005: Source 'bronze.brz_station_details' not found in project. Searched for 'brz_station_details'
+  --> models/staging/stg_station_details.sql:8:10
+10:11:29.423742 [error]: dbt1005: Source 'bronze.brz_station_information' not found in project. Searched for 'brz_station_information'
+  --> models/staging/stg_station_information.sql:8:10
+10:11:29.423788 [error]: dbt1005: Source 'bronze.raw_station_status' not found in project. Searched for 'raw_station_status'
+  --> models/staging/stg_station_status.sql:8:10
+10:11:29.423804 [error]: dbt1005: Source 'bronze.raw_station_status' not found in project. Searched for 'raw_station_status'
+  --> models/staging/stg_station_status.sql:25:10
+10:11:29.425358 [info ]: Cached model count updated: 3 models (accurate)
+10:11:29.632822 [error]: dbt1501: Failed to render SQL not a key type: Source not found for source name: bronze, table name: brz_station_details
+(in models/staging/stg_station_details.sql:8:10)
+  --> models/staging/stg_station_details.sql:8:10
+10:11:29.633335 [error]: dbt1501: Failed to render SQL not a key type: Source not found for source name: bronze, table name: raw_station_status
+(in models/staging/stg_station_status.sql:8:10)
+  --> models/staging/stg_station_status.sql:8:10
+10:11:29.633412 [error]: dbt1501: Failed to render SQL not a key type: Source not found for source name: bronze, table name: brz_station_information
+(in models/staging/stg_station_information.sql:8:10)
+  --> models/staging/stg_station_information.sql:8:10
+10:11:29.641634 [info ]: Cached model count updated: 3 models (accurate)

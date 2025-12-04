@@ -1,0 +1,16 @@
+velib_project:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: NUHRPOS-UO49582        # Ex : xy12345.eu-central-1
+      user: NICOSAMA1              # Ex : NICOSAMA1
+      password: Nicolas070899@
+
+      role: ACCOUNTADMIN             # Ou un autre rôle si tu veux
+      warehouse: Velib_Silver_WH       # Ou Velib_Silver_WH si tu utilises celui-là
+      database: VELIB_DB            # Ta base
+      schema: SILVER                # Schéma par défaut (dbt ajoutera +schema pour chaque dossier)
+
+      threads: 4
+      client_session_keep_alive: False
